@@ -72,15 +72,12 @@
         </div>
       </div>
       <style>
-        .desired-location {
-          /* Adjust positioning properties to place the container where you want */
-          position: relative; /* Use relative positioning */
-          top: 200px; /* Adjust the desired vertical position */
-          left: 500px; /* Adjust the desired horizontal position */
-          display: flex; /* Use flexbox for horizontal layout */
-          align-items: center; /* Align items vertically within the container */
-          gap: 50px; /* Adjust the gap between images */
-        }
+       .desired-location {
+  position: relative;
+  margin: 0 auto; /* Center horizontally */
+  text-align: center; /* Center the content inside the container */
+  max-width: 1200px; /* Adjust the maximum width as needed */
+}
         .small-logo {
         width: 150px; /* Adjust the value to your desired width */
         height: 150; /* Automatically adjust the height based on the aspect ratio */
@@ -107,13 +104,20 @@
           height: 250px; /* Maintain the image's aspect ratio */
         }
         .highlighted-box {
-          background-color: #1e3249; /* Background color */
-          color: #fff; /* Text color */
-          padding: 10px 15px; /* Padding to create the box */
-          border-radius: 20px; /* Rounded corners */
-          display: inline-block; /* Inline block to contain the text */
-          text-decoration: none; /* Remove underlines for links */
-      }
+  background-color: #1e3249;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 20px;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center; /* Center the text horizontally */
+}
+
+      .item {
+  display: inline-block;
+  vertical-align: top; /* Align cards to the top within the container */
+  margin: 20px; /* Adjust the margin between cards as needed */
+}
         .admin-link {
           background-color: #007bff; /* Change the background color to blue (you can use your preferred color) */
           color: #fff; /* Change the text color to white or your preferred color */

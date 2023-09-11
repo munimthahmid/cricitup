@@ -489,7 +489,7 @@ select {
                     <tr>
                       <th class="player-image-cell" style="text-align: center;">
                         <a href="{% url 'teams:team_detail' team_id=team.0 %}">
-                        <img src="{% if team.3 %}{% static 'cricitup/images/'|add:team.3 %}{% else %}{% static 'cricitup/images/default.jpg' %}{% endif %}" alt="{{ team.0 }}" class="player-image">
+                        <img src="{% if team.2 %}{% static 'cricitup/images/'|add:team.2 %}{% else %}{% static 'cricitup/images/default.jpg' %}{% endif %}" alt="{{ team.0 }}" class="player-image">
                         </a>
                     </th>
                       <td><h5><b>{{ team.1}}</b></h5></td>
@@ -516,7 +516,7 @@ select {
                       <tr>
                         <th class="player-image-cell" style="text-align: center;">
                           <a href="{% url 'teams:team_detail' team_id=team.0 %}">
-                          <img src="{% if team.3 %}{% static 'cricitup/images/'|add:team.3 %}{% else %}{% static 'cricitup/images/default.jpg' %}{% endif %}" alt="{{ team.0 }}" class="player-image">
+                          <img src="{% if team.2 %}{% static 'cricitup/images/'|add:team.2 %}{% else %}{% static 'cricitup/images/default.jpg' %}{% endif %}" alt="{{ team.0 }}" class="player-image">
                           </a>
                       </th>
                         <td><h5><b>{{ team.1}}</b></h5></td>

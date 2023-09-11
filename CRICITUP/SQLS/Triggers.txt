@@ -221,3 +221,28 @@ BEGIN
     END IF;
 END;
 /
+
+
+
+CREATE OR REPLACE TRIGGER PLAYER_CHANGE
+BEFORE INSERT OR DELETE
+ON PERSON
+FOR EACH ROW 
+DECLARE
+    USERNAME VARCHAR2(25);
+    DESCRIPTION VARCHAR2(100);
+    NAME VARCHAR2(50);
+BEGIN
+    USERNAME := USER;
+    
+    -- Determine the type of change and set the description accordingly
+    IF INSERTING THEN
+        DESCRIPTION := 'New player added: ' || :NEW.FIRST_NAME||' '|| :NEW.LAST_NAME;
+       ELSIF DELETING THEN
+        DESCRIPTION := 'Player deleted: ' || :OLD.FIRST_NAME||:OLD.LAST_NAME;
+    END IF;
+
+    -- Insert the change into the log table
+    INSERT INTO LOG_TABLE (USERNAME, DESCRIPTION, DATETIME)
+    VALUES (USERNAME, DESCRIPTION, SYSDATE);
+END;
